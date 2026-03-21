@@ -3,6 +3,7 @@
 
 using namespace geode::prelude;
 
+ patch-1
 void updateCustomFPS() {
     auto fpsValue = Mod::get()->getSettingValue<double>("fps-limit");
     auto enabled = Mod::get()->getSettingValue<bool>("enable-bypass");
@@ -30,3 +31,15 @@ $execute {
     });
 }
 
+
+class $modify(CCApplication) {
+    void setupGLView() {
+        CCApplication::setupGLView();
+        
+        // Это число — твой новый FPS
+        float targetFPS = 240.0f; 
+        
+        CCDirector::sharedDirector()->setAnimationInterval(1.0f / targetFPS);
+    }
+};
+ main
