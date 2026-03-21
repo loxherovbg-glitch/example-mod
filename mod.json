@@ -1,17 +1,31 @@
 {
-	"geode": "$GEODE_VERSION",
+	"geode": "5.0.0",
 	"gd": {
-		"win": "2.2081",
+		"win": "2.2074",
 		"android": "2.2081",
-		"mac": "2.2081",
+		"mac": "2.2074",
 		"ios": "2.2081"
 	},
-	"id": "$MOD_ID",
-	"name": "$MOD_NAME",
-	"version": "$MOD_VERSION",
-	"developer": "$MOD_DEVELOPER",
-	"description": "$MOD_DESCRIPTION",
+	"id": "ne_at.super_fps_bypass",
+	"name": "My FPS Bypass",
+	"version": "v1.0.0",
+	"developer": "Не аттендынба",
+	"description": "Ультра-свежий байпасс под Geode v5!",
 	"dependencies": {
-		"geode.node-ids": ">=v1.20.0"
+		"geode.node-ids": ">=v1.2.0"
+	},
+	"settings": {
+		"enable-bypass": {
+			"name": "Включить FPS Bypass",
+			"type": "bool",
+			"default": true
+		},
+		"fps-limit": {
+			"name": "Лимит FPS",
+			"type": "real",
+			"default": 240.0,
+			"min": 60.0,
+			"max": 360.0
+		}
 	}
 }
